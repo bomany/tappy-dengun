@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObstacleController : MonoBehaviour {
     public float moveSpeed = 5f;
-    private float multiplier;
     private bool canMove = true;
 
     public float padding;

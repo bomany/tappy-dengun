@@ -50,9 +50,4 @@ public class BackgroundScroller : MonoBehaviour {
     {
         canMove = isPaused;
     }
-
-    void SetSpeed(float s)
-    {
-        //multiplier = s;
-    }
 }

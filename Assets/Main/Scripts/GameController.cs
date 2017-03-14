@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
     public static GameController instance = null;
-    public float multiplier = 1f;
+
+    [Range(0.0f, 10.0f)]
+    public float gameSpeed = 1f;
 
     public float spawnCooldown = 5f;
     private float cooldown = 0;
@@ -17,7 +19,6 @@ public class GameController : MonoBehaviour {
     public GameObject obstacle;
     public Vector3 spawnCoords;
 
-    private float gameSpeed = 1f;
     private bool gameOver = false;
     private float gameoverCooldown = 0F;
     public List<BackgroundScroller> backgrounds;
@@ -82,22 +83,22 @@ public class GameController : MonoBehaviour {
 
     void SpawnObstacle()
     {
-        if (canSpawn && Time.time > cooldown && obstacleCount < (maxObstacles*(int)multiplier))
+        if (canSpawn && Time.time > cooldown && obstacleCount < (maxObstacles*(int)gameSpeed))
         {
             Instantiate(obstacle, spawnCoords, Quaternion.identity);
             obstacleCount += 1;
-            cooldown = Time.time + (spawnCooldown/(int)multiplier);
+            cooldown = Time.time + (spawnCooldown/(int)gameSpeed);
         }
     }
 
     public float GetGameSpeed()
     {
-        return multiplier;
+        return gameSpeed;
     }
 
-    public void Pause(bool isPaused)
-    {
-        canSpawn = isPaused;
-        //EventHandler.TriggerPause();
-    }
+    //public void Pause(bool isPaused)
+    //{
+    //    canSpawn = isPaused;
+    //    EventHandler.TriggerPause();
+    //}
 }

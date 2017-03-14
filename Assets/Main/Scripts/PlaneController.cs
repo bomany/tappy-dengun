@@ -11,9 +11,9 @@ public class PlaneController : MonoBehaviour {
     private float clickTime = 0f;
     private bool alive = true;
 
-    private Transform sprite;
+    public Transform sprite;
     public GameObject smoke;
-    public Animator animation;
+    private new Animator animation;
 
     public bool godMode = false;
 
@@ -41,9 +41,9 @@ public class PlaneController : MonoBehaviour {
     void Initialize()
     {
         rb = GetComponent<Rigidbody2D>();
-        sprite = transform.GetChild(0);
         smoke.SetActive(false);
         EventHandler.GameoverEvent += GameOver;
+        animation = sprite.GetComponent<Animator>();
     }
 
     void IncrementScore(string tag)
