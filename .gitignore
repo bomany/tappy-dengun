@@ -36,3 +36,4 @@ sysinfo.txt
 # ======
 src/*
 .collabignore
+Build/

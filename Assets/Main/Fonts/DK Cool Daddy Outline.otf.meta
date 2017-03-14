@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 98d2c9812525afe4ab8547e7537f569e
+timeCreated: 1489270320
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DK Cool Daddy Outline
+  fontNames:
+  - DK Cool Daddy Outline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
