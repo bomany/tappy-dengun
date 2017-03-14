@@ -1,6 +1,6 @@
 # Tappy Dengun
 
-#Description
+# Description
 A Template Project created for a company event with unity.
 The project itself is meant to be a flappy bird clone for the purpose of learning unity.
 
