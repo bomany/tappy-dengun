@@ -73,7 +73,8 @@ public class PlaneController : MonoBehaviour {
     public void GameOver() {
         alive = false;
         smoke.SetActive(true);
-        animation.Stop();
+        //animation.Stop();
+        animation.SetTrigger("dead");
     }
 
     void OnClick()
